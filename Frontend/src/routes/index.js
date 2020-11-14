@@ -12,7 +12,7 @@ const AppRoutes = () => {
     <PagesRoutes.Navigator 
       screenOptions={{
         headerShown: false,
-        cardStyle: { backgroundColor: '#1E2026' }
+        cardStyle: { backgroundColor: '#F5F5F5' }
       }}
       initialRouteName="Dashboard"
     >

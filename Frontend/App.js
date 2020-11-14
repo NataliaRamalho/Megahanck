@@ -9,7 +9,7 @@ import AppRoutes from './src/routes';
 const IndexApp = () => {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor="#1E2026" />
+      <StatusBar barStyle="light-content" backgroundColor="#0493D5" />
       <View style={{ flex: 1}}>
         <AppRoutes />
       </View>
