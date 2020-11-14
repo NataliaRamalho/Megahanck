@@ -14,7 +14,7 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#1E2026' }
       }}
-      initialRouteName="ShowItem"
+      initialRouteName="Dashboard"
     >
       <PagesRoutes.Screen name="Menu" component={Menu}/>
       <PagesRoutes.Screen name="ShowItem" component={ShowItem}/>

@@ -1,23 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import App from './src/App';
+import { StatusBar, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+import AppRoutes from './src/routes';
+
+const IndexApp = () => {
   return (
-    <View style={styles.container}>
-      <Text> OLA MUNDO</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <StatusBar barStyle="light-content" backgroundColor="#1E2026" />
+      <View style={{ flex: 1}}>
+        <AppRoutes />
+      </View>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default IndexApp;
