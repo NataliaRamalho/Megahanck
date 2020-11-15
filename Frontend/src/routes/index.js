@@ -7,6 +7,7 @@ import ShowItem from '../pages/ShowItem';
 import Payment from '../pages/Payment';
 import ShowFriends from '../pages/showFriends'
 import PayNow from '../pages/PayNow';
+import SplitBill from '../pages/SplitBill';
 
 const PagesRoutes = createStackNavigator();
 
@@ -33,6 +34,7 @@ const AppRoutes = () => {
           title: 'Dividir conta'
         }}
       />
+       <PagesRoutes.Screen  name="SplitBill" component={SplitBill}/>
     </PagesRoutes.Navigator>
   )
 }
