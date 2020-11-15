@@ -19,38 +19,6 @@ export const BackButton = styled(RectButton)`
   left: 30px;
 `;
 
-
-export const TextInput = styled.TextInput`
-  flex: 1;
-  color: #707070;
-  font-size: 14px;
-  padding: 0 5px 0 20px;
-`
-
-export const Title = styled.View`
-  background-color: #fff;
-  padding: 0 31px;
-  height: 62px;
-  align-items: center;
-  flex-direction: row;
-  elevation: 3;
-`;
-
-export const CirclesContainer = styled.View`
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 20px 25px;
-`;
-export const Circle = styled.View`
-  margin: 15px 10px;
-  background-color: #009FE2;
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const BottomHeader = styled.View`
   background-color:#009EE3; 
   align-items: center;
@@ -70,6 +38,42 @@ export const ContainerInput = styled.View`
   margin-bottom: 12px;
 `;
 
+export const TextInput = styled.TextInput`
+  flex: 1;
+  color: #707070;
+  font-size: 14px;
+  padding: 0 5px 0 20px;
+`;
+
 export const Icon = styled(AntDesign)`
   margin-right: 15px;
+`;
+
+export const SelectedFriends = styled.View`
+  background-color: #fff;
+  padding: 0 31px;
+  height: 89px;
+  align-items: center;
+  flex-direction: row;
+  elevation: 3;
+
+  ${props => props.isSelected &&
+    css`
+      visibility: visible;
+    `}
+`;
+
+export const FriendsList = styled.View`
+
+`;
+
+export const UserImage = styled.Image`
+  margin: 0 20px 0 15px; 
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;  
+`;
+
+export const UserContainer = styled.View`
+  
 `;

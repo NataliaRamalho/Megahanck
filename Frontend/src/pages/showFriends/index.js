@@ -1,7 +1,21 @@
 import React from 'react';
-import { Feather, AntDesign } from '@expo/vector-icons';  
+import { Feather } from '@expo/vector-icons';  
 import { Text } from 'react-native';
-import {Header, BackButton, Title, Icon, TextInput, BottomHeader, ContainerInput, Container} from './styles';
+import {
+    Header, 
+    BackButton, 
+    Icon,
+    TextInput,
+    BottomHeader, 
+    ContainerInput, 
+    Container, 
+    SelectedFriends,
+    FriendsList, 
+    UserImage,
+    UserContainer
+} from './styles';
+
+import Person from '../../assets/person.png'
 
 const ShowFriends = () => {
     return(
@@ -18,14 +32,18 @@ const ShowFriends = () => {
                     <TextInput placeholder="Informe o nome e-mail ou telefone" >
                     </TextInput>
                     <Icon name="search1" size={20} color="#2D3277" />
-             </ContainerInput>
+                </ContainerInput>
             </BottomHeader>
 
-            <Title>
-            </Title>
-            <Container>
+            <SelectedFriends>
+                <UserContainer>
+                    <UserImage source={Person}/>
+                    <Text>Miguel</Text>
+                </UserContainer>
+            </SelectedFriends>
+            <FriendsList>
 
-            </Container>
+            </FriendsList>
 
         </Container>
     )
