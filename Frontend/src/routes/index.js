@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Menu from '../pages/menu';
 import Dashboard from '../pages/dashboard';
 import ShowItem from '../pages/ShowItem';
+import Payment from '../pages/Payment';
 
 const PagesRoutes = createStackNavigator();
 
@@ -14,11 +15,12 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
-      initialRouteName="Dashboard"
+      initialRouteName="Payment"
     >
       <PagesRoutes.Screen name="Menu" component={Menu}/>
       <PagesRoutes.Screen name="ShowItem" component={ShowItem}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
+      <PagesRoutes.Screen  name="Payment" component={Payment}/>
     </PagesRoutes.Navigator>
   )
 }

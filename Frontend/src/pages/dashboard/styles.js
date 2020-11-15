@@ -20,7 +20,7 @@ export const CirclesContainer = styled.View`
   margin: 20px 25px;
 `;
 export const Circle = styled.View`
-  margin: 10px;
+  margin: 15px 10px;
   background-color: #009FE2;
   width: 70px;
   height: 70px;
@@ -32,15 +32,18 @@ export const Circle = styled.View`
 export const ContainerMiddle = styled.View`
   margin: 0 25px;
   height: 90px;
+  justify-content: center;
   background-color: white;
-  elevation: 5;
+  elevation: 4;
 `;
 export const ContainerBottom = styled.View`
+  height: 300px;
+  align-items: center;
   background-color: white;
   border-radius: 6px;
   margin: 20px 15px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  elevation: 6
+  elevation: 5;
 `;
