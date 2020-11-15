@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';  
-
+import { useNavigation } from '@react-navigation/native';
 import {Container, Title, TotalPayment, BackButton} from './styles';
 import ButtonComp from '../../components/button';
 import Header from '../../components/Header';
 
 
 const Payment = () => {
+  const navigation = useNavigation();
   return (
     <Container>
       <Header>Pagamento</Header>
@@ -27,7 +28,7 @@ const Payment = () => {
         </Text>
       </TotalPayment>
 
-      <ButtonComp style={{marginTop: 29}}>Dividir Conta</ButtonComp>
+      <ButtonComp onPress={() => navigation.navigate('showFriends')} style={{marginTop: 29}}>Dividir Conta</ButtonComp>
       
       <ButtonComp style={{backgroundColor: "#FFF"}}>
         <Text style={{color: "#009EE3"}}>Pagar agora</Text>

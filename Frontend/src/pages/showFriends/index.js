@@ -1,8 +1,8 @@
 import React from 'react';
-import { Feather } from '@expo/vector-icons';  
-import { Text } from 'react-native';
-import {
-    Header, 
+import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { Button, Text } from 'react-native';
+import { 
     BackButton, 
     Icon,
     TextInput,
@@ -14,10 +14,12 @@ import {
     UserImage,
     UserContainer
 } from './styles';
+import Header from '../../components/Header';
 
 import Person from '../../assets/person.png'
 
 const ShowFriends = () => {
+    const navigation = useNavigation();
     return(
         <Container>
              <Header>Dividir Conta</Header>
@@ -38,7 +40,9 @@ const ShowFriends = () => {
             <FriendsList>
 
             </FriendsList>
-
+            <Button title="ok" onPress={() => navigation.navigate('SplitBill')} >
+              
+            </Button>
         </Container>
     )
 }

@@ -7,6 +7,7 @@ import ShowItem from '../pages/ShowItem';
 import Payment from '../pages/Payment';
 import ShowFriends from '../pages/showFriends'
 import SplitBill from '../pages/SplitBill';
+import Notification from '../pages/Notification';
 
 const PagesRoutes = createStackNavigator();
 
@@ -20,11 +21,11 @@ const AppRoutes = () => {
       initialRouteName="Payment"
     >
       <PagesRoutes.Screen name="Menu" component={Menu}/>
-      <PagesRoutes.Screen name="ShowItem" component={ShowItem}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
       <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
       <PagesRoutes.Screen  name="SplitBill" component={SplitBill}/>
+      <PagesRoutes.Screen  name="Notification" component={Notification}/>
     </PagesRoutes.Navigator>
   )
 }

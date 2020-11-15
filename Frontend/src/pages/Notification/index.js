@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import Header from '../../components/Header';
 import { useNavigation } from '@react-navigation/native';
+
 
 import {
   Container, 
@@ -9,16 +9,15 @@ import {
   EachText, 
   Button, 
   Title,
-  ValueText,
-  Text2
+  Icon,
 } from './styles';
 
-const SplitBill = () => {
+const Notification = () => {
   const navigation = useNavigation();
   return (
     <Container>
-      <Header>Dividir conta</Header>
-      <Title>Você e Miguel irão pagar</Title>
+      <Icon onPress={() => navigation.navigate('Payment')} name="md-close" size={40} color="#009EE3"/>
+      <Title>Seu amigo, XXXX, dividiu esta compra com você:</Title>
       
       <TotalPayment>
         <Text style={{fontSize: 36, marginTop: 25, marginRight:10}}>
@@ -28,21 +27,18 @@ const SplitBill = () => {
         <Text style={{fontSize: 36, marginTop: 25, marginLeft:10}}>
           00
         </Text>
+
         <EachText>Cada</EachText>
+
       </TotalPayment>
 
-      <ValueText>
-        Valor total: R$200,00
-      </ValueText>
 
-      <Text2>Ao clicar no botão OK, seu amigo receberá uma notificação para efetuar o pagamento.</Text2>
-
-      <Button onPress={() => navigation.navigate('Notification')}>
-        <Text style={{color: '#fff'}}>OK</Text>
+      <Button style={{marginTop: 43}} >
+        <Text style={{color: '#fff'}}>Pagar agora</Text>
       </Button>
 
     </Container>
   );
 };
 
-export default SplitBill;
+export default Notification;
