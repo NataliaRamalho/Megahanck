@@ -25,15 +25,7 @@ const AppRoutes = () => {
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
       <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
-      <PagesRoutes.Screen  
-        name="payNow" 
-        component={PayNow}
-        options={{
-          headerShown: true,
-          headerTitleAlign: "center",
-          title: 'Dividir conta'
-        }}
-      />
+      <PagesRoutes.Screen  name="payNow" component={PayNow}/>
        <PagesRoutes.Screen  name="SplitBill" component={SplitBill}/>
     </PagesRoutes.Navigator>
   )

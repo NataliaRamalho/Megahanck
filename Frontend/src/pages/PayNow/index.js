@@ -2,17 +2,33 @@ import React from 'react';
 import { Text, Image } from 'react-native';
 
 import backgroundImage from '../../assets/background.png';
+import Button from '../../components/button';
+import Header from '../../components/Header';
 
-import { Container } from './styles';
+import { Container, BackgroundImage, NotificationSentText, PayNowText } from './styles';
 
 const PayNow = () => {
 
   return (
-    <Container>
-      <Text>Foi enviada uma notificação{'\n'}para seu amigo!</Text>
-      <Image style={{ height: 40, width: 40}} source={backgroundImage} />
-      <Text>Aproveite e page agora sua parcela.</Text>
-    </Container>
+    <>
+      <Header>Dividir conta</Header>
+      <Container>
+        <NotificationSentText>Foi enviada uma notificação{'\n'}para seu amigo!</NotificationSentText>
+        <BackgroundImage source={backgroundImage} />
+        <PayNowText>Aproveite e page agora sua parcela.</PayNowText>
+        <Button
+          onPress={() => {}}
+        >
+          Pagar agora
+        </Button>
+        <Button
+          isSecundary
+          onPress={() => {}}
+        >
+          Mais tarde
+        </Button>
+      </Container>
+    </>
   )
 }
 
