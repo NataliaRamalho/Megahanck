@@ -5,7 +5,7 @@ import {
   CirclesContainer, 
   Circle, 
   ContainerMiddle, 
-  ContainerBottom
+  ContainerBottom,
 } from './styles';
 import { 
   Feather, 
@@ -13,10 +13,12 @@ import {
   SimpleLineIcons
 } from '@expo/vector-icons';
 import ButtonComp from '../../components/button';
-import { Text, View } from 'react-native';
+import { Text, View, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+
 const Dashboard = () => {
   return (
-    <Container>
+    <SafeAreaView style={styles.container}>
+      <ScrollView >
       <TopHeader>
         <SimpleLineIcons name="menu" size={30} color="white" />
         <View>
@@ -123,10 +125,26 @@ const Dashboard = () => {
         </View>
       </ContainerBottom>
 
-      <ButtonComp>Entrar agr</ButtonComp>
-
-    </Container>
+      <ButtonComp onPress={test} style={styles.blue}>Entrar agr</ButtonComp>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
+const test= function() {
+  return console.log("oii")
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  blue: {
+    backgroundColor: "#009eef",
+  },
+  white: {
+    backgroundColor: "#fff",
+  },
+});
+
 
 export default Dashboard;
