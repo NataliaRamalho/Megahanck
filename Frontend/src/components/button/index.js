@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container, ButtonText } from './styles';
+import {StyleSheet} from 'react-native'
 
-const handleClick = () => {
-console.log('foi')
 
-};
+
 export default function ButtonComp( {children, ...rest}){
     return (
-    <Container {...rest}>
+    <Container {...rest} >
         <ButtonText>{children}</ButtonText>
     </Container>
     )
-}
+};
+

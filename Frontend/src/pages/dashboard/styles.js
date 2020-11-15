@@ -42,5 +42,5 @@ export const ContainerBottom = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  elevation: 6
+  elevation: 6;
 `;
