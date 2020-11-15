@@ -15,7 +15,7 @@ export const Header = styled.View`
 
 export const BackButton = styled(RectButton)`
   position: absolute;
-  left: 30;
+  left: 30px; //mexi aqui
 `;
 
 export const Title = styled.View`

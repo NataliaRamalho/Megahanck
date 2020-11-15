@@ -5,6 +5,7 @@ import Menu from '../pages/menu';
 import Dashboard from '../pages/dashboard';
 import ShowItem from '../pages/ShowItem';
 import Payment from '../pages/Payment';
+import ShowFriends from '../pages/showFriends'
 
 const PagesRoutes = createStackNavigator();
 
@@ -15,12 +16,13 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
-      initialRouteName="Payment"
+      initialRouteName="showFriends"
     >
       <PagesRoutes.Screen name="Menu" component={Menu}/>
       <PagesRoutes.Screen name="ShowItem" component={ShowItem}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
+      <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
     </PagesRoutes.Navigator>
   )
 }
