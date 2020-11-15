@@ -20,13 +20,7 @@ import Person from '../../assets/person.png'
 const ShowFriends = () => {
     return(
         <Container>
-             <Header>
-                <BackButton>
-                    <Feather name="arrow-left" size={34} color="#fff" />
-                </BackButton>
-                <Text style={{fontSize: 18, color: "#fff"}}>Dividir conta</Text>
-            </Header>
-
+             <Header>Dividir Conta</Header>
             <BottomHeader >
                 <ContainerInput >
                     <TextInput placeholder="Informe o nome e-mail ou telefone" >
