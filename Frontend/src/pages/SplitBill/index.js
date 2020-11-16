@@ -18,7 +18,7 @@ const SplitBill = () => {
   return (
     <Container>
       <Header>Dividir conta</Header>
-      <Title>Você e Miguel irão pagar</Title>
+      <Title>Você e Caio irão pagar</Title>
       
       <TotalPayment>
         <Text style={{fontSize: 36, marginTop: 25, marginRight:10}}>
