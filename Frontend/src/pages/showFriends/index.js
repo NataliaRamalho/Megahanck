@@ -25,23 +25,29 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ShowFriends = () => {
     const navigation = useNavigation();
-    const [friends, setFriends] = useState([])
     const [selectedFriends, setSelectedFriends] = useState([]);
-
-    console.log(friends)
-
+    
     useEffect(() => {
-            const response = api.get('/users').then(
-                response => setFriends(response.data)
-            ).catch(
-                e => console.log(e)
-            );
-    }, []);
+      console.log(selectedFriends.length)
+    },[])
+    const friends = [
+    {
+      name: 'Caio',
+      avatar: Person3
+    } ,
+    {
+      name: 'Gabriel',
+      avatar: Person2
+    } ,
+    {
+      name: 'Natalia',
+      avatar: Person
+    }
+  ]
 
-    const handleFriends = (friend)=>{
-        console.log(friend)
-        // setSelectedFriends(...selectedFriends, friend);
-        console.log(selectedFriends)
+
+    const handleAddFriends = (friend)=>{
+       setSelectedFriends([...selectedFriends, friend]);
     }
     
     return(
@@ -55,38 +61,33 @@ const ShowFriends = () => {
                 </ContainerInput>
             </BottomHeader>
 
-            <SelectedFriends>
-                <UserContainer>
-                    <UserImage source={Person2}/>
-                    <Text>Miguel</Text>
-                </UserContainer>
-            </SelectedFriends>
-
+           {
+             selectedFriends.length > 0 && (
+              selectedFriends.map(selectedFriend => {
+                return (
+                  <SelectedFriends key={selectedFriend.name}>
+                  <UserContainer>
+                      <UserImage source={selectedFriend.avatar}/>
+                      <Text>{selectedFriend.name}</Text>
+                  </UserContainer>
+                 </SelectedFriends>
+                )
+              })
+             )
+           }
             <FriendsList>
-
-                <TouchableOpacity  onPress={handleFriends(1)}>
-                    <FriendsContainer >
-                        <UserImage source={Person}/>
-                        <Text>Luna</Text>
-                    </FriendsContainer>
-                </TouchableOpacity>
-
-
-                <TouchableOpacity  onPress={handleFriends(2)}>
-                    <FriendsContainer >
-                        <UserImage source={Person2}/>
-                        <Text>Miguel</Text>
-                    </FriendsContainer>
-                </TouchableOpacity>
-
-
-            <TouchableOpacity  onPress={handleFriends(3)}>
-                <FriendsContainer >
-                    <UserImage source={Person3}/>
-                    <Text>Jose</Text>
-                </FriendsContainer>
-            </TouchableOpacity>
-
+              {
+                friends.map(friend => {
+                  return (
+                    <TouchableOpacity key={friend.name}  onPress={() => handleAddFriends(friend)}>
+                      <FriendsContainer >
+                          <UserImage source={friend.avatar}/>
+                       <Text>{friend.name}</Text>
+                      </FriendsContainer>
+                   </TouchableOpacity>
+                  )
+                })
+              }
             </FriendsList>
             <OkButton onPress={() => navigation.navigate('SplitBill')} >
                 <Feather name="arrow-right" size={34} color="#fff" />
