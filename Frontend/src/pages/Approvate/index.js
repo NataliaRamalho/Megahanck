@@ -19,7 +19,7 @@ const Approvate = () => {
         <NotificationSentText>Pagamento Aprovado com sucesso</NotificationSentText>
         <BackgroundImage source={Confirmed} />
         <Button
-          onPress={() => {navigation.navigate('Payment')}}
+          onPress={() => {navigation.navigate('Splash')}}
         >
           ok
         </Button>
