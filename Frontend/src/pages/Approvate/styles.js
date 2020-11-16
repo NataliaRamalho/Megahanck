@@ -6,7 +6,8 @@ export const Container = styled.View`
 `;
 
 export const NotificationSentText = styled.Text`
-  margin: 37px 0 15px 0;
+  margin: 121px 0 58px 0;
+  width: 195px;
   font-size:18px;
   text-align: center;
 `;
@@ -14,6 +15,7 @@ export const NotificationSentText = styled.Text`
 export const BackgroundImage = styled.Image`
   height: 197px;
   width: 238px;
+  margin-bottom: 58px;
 `;
 
 export const PayNowText = styled.Text`
