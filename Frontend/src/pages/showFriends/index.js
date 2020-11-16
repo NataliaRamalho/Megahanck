@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { Button, Text } from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import { Text } from 'react-native';
 import api from '../../services/api';
 import { 
     Icon,
@@ -20,6 +19,9 @@ import {
 import Header from '../../components/Header';
 
 import Person from '../../assets/person.png'
+import Person2 from '../../assets/person2.png'
+import Person3 from '../../assets/person3.png'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ShowFriends = () => {
     const navigation = useNavigation();
@@ -36,8 +38,9 @@ const ShowFriends = () => {
             );
     }, []);
 
-    const haddleFriends = (user)=>{
-        setSelectedFriends(...selectedFriends, user);
+    const handleFriends = (friend)=>{
+        console.log(friend)
+        // setSelectedFriends(...selectedFriends, friend);
         console.log(selectedFriends)
     }
     
@@ -54,27 +57,36 @@ const ShowFriends = () => {
 
             <SelectedFriends>
                 <UserContainer>
-                    <UserImage source={Person}/>
-                    <Text>Miguel</Text>
-                </UserContainer>
-
-                <UserContainer>
-                    <UserImage source={Person}/>
+                    <UserImage source={Person2}/>
                     <Text>Miguel</Text>
                 </UserContainer>
             </SelectedFriends>
 
             <FriendsList>
 
-                <FriendsContainer>
-                    <UserImage source={Person}/>
-                    <Text>Miguel</Text>
-                </FriendsContainer>
+                <TouchableOpacity  onPress={handleFriends(1)}>
+                    <FriendsContainer >
+                        <UserImage source={Person}/>
+                        <Text>Luna</Text>
+                    </FriendsContainer>
+                </TouchableOpacity>
 
-                <FriendsContainer>
-                    <UserImage source={Person}/>
-                    <Text>Miguel</Text>
+
+                <TouchableOpacity  onPress={handleFriends(2)}>
+                    <FriendsContainer >
+                        <UserImage source={Person2}/>
+                        <Text>Miguel</Text>
+                    </FriendsContainer>
+                </TouchableOpacity>
+
+
+            <TouchableOpacity  onPress={handleFriends(3)}>
+                <FriendsContainer >
+                    <UserImage source={Person3}/>
+                    <Text>Jose</Text>
                 </FriendsContainer>
+            </TouchableOpacity>
+
             </FriendsList>
             <OkButton onPress={() => navigation.navigate('SplitBill')} >
                 <Feather name="arrow-right" size={34} color="#fff" />

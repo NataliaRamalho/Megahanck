@@ -19,15 +19,15 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
-      initialRouteName="Approvate"
+      initialRouteName="Payment"
     >
-      <PagesRoutes.Screen  name="Approvate" component={Approvate}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
       <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
       <PagesRoutes.Screen  name="SplitBill" component={SplitBill}/>
       <PagesRoutes.Screen  name="payNow" component={PayNow}/>
       <PagesRoutes.Screen  name="Notification" component={Notification}/>
+      <PagesRoutes.Screen  name="Approvate" component={Approvate}/>
     </PagesRoutes.Navigator>
   )
 }

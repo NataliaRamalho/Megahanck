@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import backgroundImage from '../../assets/background.png';
 import Button from '../../components/button';
@@ -8,6 +9,8 @@ import Header from '../../components/Header';
 import { Container, BackgroundImage, NotificationSentText, PayNowText } from './styles';
 
 const PayNow = () => {
+  const navigation = useNavigation();
+
 
   return (
     <>
@@ -17,13 +20,13 @@ const PayNow = () => {
         <BackgroundImage source={backgroundImage} />
         <PayNowText>Aproveite e page agora sua parcela.</PayNowText>
         <Button
-          onPress={() => {}}
+          onPress={() => {navigation.navigate('Approvate')}}
         >
           Pagar agora
         </Button>
         <Button
           isSecundary
-          onPress={() => {}}
+          onPress={() => {navigation.navigate('Payment')}}
         >
           Mais tarde
         </Button>
