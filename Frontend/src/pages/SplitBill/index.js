@@ -37,7 +37,7 @@ const SplitBill = () => {
 
       <Text2>Ao clicar no botão OK, seu amigo receberá uma notificação para efetuar o pagamento.</Text2>
 
-      <Button onPress={() => navigation.navigate('Notification')}>
+      <Button onPress={() => navigation.navigate('payNow')}>
         <Text style={{color: '#fff'}}>OK</Text>
       </Button>
 

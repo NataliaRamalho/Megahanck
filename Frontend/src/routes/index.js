@@ -19,7 +19,7 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
-      initialRouteName="payNow"
+      initialRouteName="Payment"
     >
       <PagesRoutes.Screen name="Menu" component={Menu}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
