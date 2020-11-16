@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Button, Text } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
+import api from '../../services/api';
 import { 
-    BackButton, 
     Icon,
     TextInput,
     BottomHeader, 
@@ -12,7 +13,9 @@ import {
     SelectedFriends,
     FriendsList, 
     UserImage,
-    UserContainer
+    UserContainer,
+    OkButton,
+    FriendsContainer
 } from './styles';
 import Header from '../../components/Header';
 
@@ -20,6 +23,24 @@ import Person from '../../assets/person.png'
 
 const ShowFriends = () => {
     const navigation = useNavigation();
+    const [friends, setFriends] = useState([])
+    const [selectedFriends, setSelectedFriends] = useState([]);
+
+    console.log(friends)
+
+    useEffect(() => {
+            const response = api.get('/users').then(
+                response => setFriends(response.data)
+            ).catch(
+                e => console.log(e)
+            );
+    }, []);
+
+    const haddleFriends = (user)=>{
+        setSelectedFriends(...selectedFriends, user);
+        console.log(selectedFriends)
+    }
+    
     return(
         <Container>
              <Header>Dividir Conta</Header>
@@ -36,15 +57,32 @@ const ShowFriends = () => {
                     <UserImage source={Person}/>
                     <Text>Miguel</Text>
                 </UserContainer>
+
+                <UserContainer>
+                    <UserImage source={Person}/>
+                    <Text>Miguel</Text>
+                </UserContainer>
             </SelectedFriends>
+
             <FriendsList>
 
+                <FriendsContainer>
+                    <UserImage source={Person}/>
+                    <Text>Miguel</Text>
+                </FriendsContainer>
+
+                <FriendsContainer>
+                    <UserImage source={Person}/>
+                    <Text>Miguel</Text>
+                </FriendsContainer>
             </FriendsList>
-            <Button title="ok" onPress={() => navigation.navigate('SplitBill')} >
-              
-            </Button>
+            <OkButton onPress={() => navigation.navigate('SplitBill')} >
+                <Feather name="arrow-right" size={34} color="#fff" />
+            </OkButton>
         </Container>
     )
 }
+
+
 
 export default ShowFriends;

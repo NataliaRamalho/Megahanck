@@ -52,10 +52,10 @@ export const Icon = styled(AntDesign)`
 export const SelectedFriends = styled.View`
   background-color: #fff;
   padding: 0 31px;
-  height: 89px;
+  height: 93px;
   align-items: center;
   flex-direction: row;
-  elevation: 3;
+  elevation: 4;
 
   ${props => props.isSelected &&
     css`
@@ -64,7 +64,7 @@ export const SelectedFriends = styled.View`
 `;
 
 export const FriendsList = styled.View`
-
+  margin: 16px 0  0 31px;
 `;
 
 export const UserImage = styled.Image`
@@ -75,5 +75,23 @@ export const UserImage = styled.Image`
 `;
 
 export const UserContainer = styled.View`
-  
+  align-items: center;
+`;
+
+export const OkButton = styled(RectButton)`
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  background-color: #009EEF;
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const FriendsContainer = styled.View`
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 23px;
 `;

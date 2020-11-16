@@ -1,14 +1,14 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Menu from '../pages/menu';
 import Dashboard from '../pages/dashboard';
-import ShowItem from '../pages/ShowItem';
+// import ShowItem from '../pages/ShowItem';
 import Payment from '../pages/Payment';
 import ShowFriends from '../pages/showFriends'
 import PayNow from '../pages/PayNow';
 import SplitBill from '../pages/SplitBill';
 import Notification from '../pages/Notification';
+import Approvate from '../pages/Approvate';
 
 const PagesRoutes = createStackNavigator();
 
@@ -19,15 +19,15 @@ const AppRoutes = () => {
         headerShown: false,
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
-      initialRouteName="Payment"
+      initialRouteName="Approvate"
     >
-      <PagesRoutes.Screen name="Menu" component={Menu}/>
+      <PagesRoutes.Screen  name="Approvate" component={Approvate}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
       <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
       <PagesRoutes.Screen  name="SplitBill" component={SplitBill}/>
-      <PagesRoutes.Screen  name="Notification" component={Notification}/>
       <PagesRoutes.Screen  name="payNow" component={PayNow}/>
+      <PagesRoutes.Screen  name="Notification" component={Notification}/>
     </PagesRoutes.Navigator>
   )
 }
