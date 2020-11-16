@@ -21,8 +21,8 @@ const AppRoutes = () => {
         cardStyle: { backgroundColor: '#F5F5F5' }
       }}
       initialRouteName="Splash"
+
     >
-      <PagesRoutes.Screen  name="Approvate" component={Approvate}/>
       <PagesRoutes.Screen  name="Dashboard" component={Dashboard}/>
       <PagesRoutes.Screen  name="Payment" component={Payment}/>
       <PagesRoutes.Screen  name="showFriends" component={ShowFriends}/>
@@ -30,6 +30,7 @@ const AppRoutes = () => {
       <PagesRoutes.Screen  name="payNow" component={PayNow}/>
       <PagesRoutes.Screen  name="Notification" component={Notification}/>
       <PagesRoutes.Screen  name="Splash" component={Splash}/>
+      <PagesRoutes.Screen  name="Approvate" component={Approvate}/>
     </PagesRoutes.Navigator>
   )
 }
