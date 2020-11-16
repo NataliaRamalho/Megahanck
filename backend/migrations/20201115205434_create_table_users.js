@@ -5,10 +5,10 @@ exports.up = function(knex, Promise) {
         table.string('name').notNull()
         table.string('email').notNull().unique()
         table.string('password').notNull()
-    
+        table.string('url',1000)
     })
 };
 
 exports.down = function(knex, Promise) {
-    return knex.schema.dropTable('users')
+  
 };
