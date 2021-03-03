@@ -30,7 +30,7 @@ Um projeto desenvolvido em conjunto durante o Mega Hack 5, proporcionado pela [S
 
 ## 💻 Projeto
 
-Racha aí é um projeto de feature para o aplicativo do Mercado Pago, a aplicação teria como objetivo facilitar a divisão e o pagamento de contas entre amigos. Após entrar na parte de pagamento de uma conta, o usuário teria a opção de selecionar um ou mais de um membro de seus contatos e enviar a eles uma conta com parte do valor do pagamento.
+Racha aí é um projeto de feature para o aplicativo do Mercado Pago, a aplicação teria como objetivo facilitar a divisão e o pagamento de contas entre amigos. Após entrar na parte de pagamento de uma conta, o usuário teria a opção de selecionar um ou mais de seus contatos e enviar a eles uma solicitação para que possam dividir a conta.
 
 ![Gif-MegaHack5](https://github.com/Gabrielzyr/Megahanck5/blob/master/megahack5gif.gif)
 
